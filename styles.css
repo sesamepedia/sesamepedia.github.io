@@ -1,0 +1,99 @@
+body {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-size: larger;
+  color: rgb(68, 67, 67)
+}
+
+#home-anim {
+  position: fixed;
+  z-index: -1;
+  height: 120vh;
+  top: -8px;
+}
+
+#home {
+  clip-path: url(#cache);
+}
+
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #CE1B5F;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #031b21;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #031b21;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.15;
+  }
+}
+
+#cb1:checked{
+  background: #f35429;
+}
+
+.gallery-container {
+  display: flex;
+  column-gap: 10px;
+  row-gap: 30px;
+  grid-template-columns: auto auto auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-container img {
+  border-radius: 15px;
+}
+
+.gallery-comparison img {
+  border-radius: 20px;
+}
